@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "Project Main API.docs",
-    "description": "This is my first swagger API documentation",
+    "description": "Big Personal Assignment Swagger",
     "version": "1.0.0"
   },
-  "host": "zero4-personal-assignment.onrender.com",
+  "host": "big-personal-assignment.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -112,7 +112,7 @@
             "schema" : {
               "type" : "object",
               "properties" : {
-                
+
                 "date":{
                   "example": ""
                 },
