@@ -5,7 +5,7 @@
     "description": "Big Personal Assignment Swagger",
     "version": "1.0.0"
   },
-  "host": "big-personal-assignment.onrender.com",
+  "host": "big-personal-project.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
