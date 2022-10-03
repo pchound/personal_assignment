@@ -10,6 +10,7 @@
   "schemes": [
     "https"
   ],
+
   "paths": {
     "/days" : {
     "get" : {
@@ -18,14 +19,14 @@
       "parameters" :[],
       "responses" : {
         "200": {
-          "description" : "Ok"
+          "description" : "Success"
         }
       }
     },
 
 
     "post" : {
-      "description" : "This route adds a new contact.", 
+      "description" : "This route adds a new day.", 
       "produces" : ["application/json"],
       "parameters" :[
         {
@@ -34,20 +35,30 @@
           "schema" : {
             "type" : "object",
             "properties" : {
-              "firstName":{
-                "example": "John"
+              "date":{
+                "example": ""
               },
-              "lastName": {
-                "example" : "Smith"
+              "calories_burned": {
+                "example" : ""
               },
-              "email": {
-                "example" : "jsmith@gmail.com"
+              "workout_type": {
+                "example" : ""
               },
-              "favoriteColor": {
-                "example" : "blue"
+              "notes": {
+                "example" : ""
               },
-              "birthday": {
-                "example" : "01-01-00"
+
+
+
+              "protein": {
+                "example" : ""
+              },
+
+              "carbs":{
+                "example": ""
+              },
+              "fats":{
+                "example": ""
               }
             }
           }
@@ -68,7 +79,7 @@
     },
     "/days/{id}" : {
       "get" : {
-        "description" : "This route gets one contact by id.", 
+        "description" : "This route gets one day by id.", 
         "produces" : ["application/json"],
         "parameters" :[{
           "name" : "id",
@@ -78,7 +89,7 @@
         }],
         "responses" : {
           "200": {
-            "description" : "Ok"
+            "description" : "Day retrieved successfully"
           }
         }
       },
@@ -86,7 +97,7 @@
 
       
       "put" : {
-        "description" : "This route updates a current contact.", 
+        "description" : "This route updates a current day.", 
         "produces" : ["application/json"],
         "parameters" :[
           {
@@ -101,20 +112,26 @@
             "schema" : {
               "type" : "object",
               "properties" : {
-                "firstName":{
-                  "example": "New"
+                
+                "date":{
+                  "example": ""
                 },
-                "lastName": {
-                  "example" : "Guy"
+                "calories_burned": {
+                  "example" : ""
                 },
-                "email": {
-                  "example" : "newguy@gmail.com"
+               "notes":{
+                "example":""
+               },
+
+               
+                "protein": {
+                  "example" : ""
                 },
-                "favoriteColor": {
-                  "example" : "green"
+                "carbs": {
+                  "example" : ""
                 },
-                "birthday": {
-                  "example" : "02-02-01"
+                "fats": {
+                  "example" : ""
                 }
               }
             }
@@ -122,7 +139,7 @@
         ],
         "responses" : {
           "200": {
-            "description" : "Updated contact"
+            "description" : "Day successfully updated"
           },
           "500":{
             "description" : "Internal server error"
@@ -133,7 +150,7 @@
 
 
       "delete" : {
-        "description" : "This route deletes a contact", 
+        "description" : "This route deletes a day", 
         "produces" : ["application/json"],
         "parameters" :[{
           "name" : "id",
@@ -143,7 +160,7 @@
         }],
         "responses" : {
           "200": {
-            "description" : "Contact deleted successfully"
+            "description" : "Day deleted successfully"
           },
           "500": {
             "description" : "Internal server error"
