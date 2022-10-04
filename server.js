@@ -28,7 +28,8 @@ const options =
         servers:
         [
             {
-                api: 'http://localhost:3000/'
+                //api: 'http://localhost:3000/'
+                api: 'https://big-personal-project.onrender.com'
             }
         ]
     },
