@@ -3,7 +3,7 @@ const day = require('./day');
 
 routes.use('/', require('./swagger'));
 routes.use('/days', day);
-routes.use
+/*routes.use
 (
   '/',
   (
@@ -16,6 +16,6 @@ routes.use
         res.send(docData);
     }
   )
-);
+);*/
 
 module.exports = routes;

@@ -1,6 +1,6 @@
 const express = require('express');
 const controller = require('../controllers/controller');
-const client = require('../db.js').client;
+//const client = require('../db.js').client;
 const router = express.Router();
 
 router.get('/days', controller.getAllDays);

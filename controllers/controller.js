@@ -4,6 +4,20 @@ const client = require('../db.js').client;
 
 
 
+async function days(request, response) {
+    console.log('Responding to request');
+    const contacts = await client.db('personal_assignment').collection('days').find({}).toArray();
+    response.writeHead(200, { 'Content-Type': 'application/json' });
+    response.end(JSON.stringify(contacts), 'utf-8');
+};
+
+
+
+
+
+
+
+
 
 
 
@@ -47,8 +61,8 @@ async function getAllDays(req, res)
 
 async function getDayById(req, res) {
     try {
-        const contacts = await client.db('personal_assignment').collection('days').find({_id:new ObjectId(req.params.id)}).toArray();
-        res.status(200).json(contacts[0]);
+        const day = await client.db('personal_assignment').collection('days').find({_id:new ObjectId(req.params.id)}).toArray();
+        res.status(200).json(days[0]);
     } catch (error) {
         return res.status(500).json({message:'Server Error'});
     }
@@ -143,4 +157,4 @@ async function deleteDayById(req,res)
 
 
 
-module.exports={daysId, getAllDays, getDayById, createDay, updateDayById, deleteDayById};
+module.exports={days, daysId, getAllDays, getDayById, createDay, updateDayById, deleteDayById};

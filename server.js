@@ -1,3 +1,5 @@
+
+
 const dotenv = require("dotenv");
 const express = require("express");
 
@@ -32,7 +34,7 @@ const options =
     },
     apis: ['./mongodb.js']
 }
-app.use('/workout-docs', swaggerUi.serve, swaggerUi.setup(swaggerJSDoc))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJSDoc))
 
 
 
