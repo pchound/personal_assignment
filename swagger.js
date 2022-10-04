@@ -10,7 +10,7 @@ const doc = {
     description: 'Workout API',
   },
   //host: 'localhost:3000/',
-  host: "big-personal-project.onrender.com",
+  host: "big-personal-project.onrender.com/",
   schemes: ['https'],
 };
 
