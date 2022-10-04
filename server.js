@@ -32,7 +32,7 @@ const options =
     },
     apis: ['./mongodb.js']
 }
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerJSDoc))
+app.use('/workout-docs', swaggerUi.serve, swaggerUi.setup(swaggerJSDoc))
 
 
 
