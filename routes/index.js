@@ -1,16 +1,21 @@
 const routes = require('express').Router();
-const temple = require('./temple');
+const day = require('./day');
 
 routes.use('/', require('./swagger'));
-routes.use('/temples', temple);
-routes.use(
+routes.use('/days', day);
+routes.use
+(
   '/',
-  (docData = (req, res) => {
-    let docData = {
-      documentationURL: 'https://nathanbirch.github.io/nathan-byui-workout-docs',
-    };
-    res.send(docData);
-  })
+  (
+    docData = (req, res) => 
+    {
+        let docData = 
+        {
+            documentationURL: 'https://pchound.github.io/personal_assignment',
+        };
+        res.send(docData);
+    }
+  )
 );
 
 module.exports = routes;
