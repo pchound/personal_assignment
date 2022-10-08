@@ -33,8 +33,8 @@ const options =
         [
             {
                 //Leave this alone
-                api: 'https://localhost:3000/'
-                //api: 'https://big-personal-project.onrender.com'
+                //api: 'https://localhost:3000/'
+                api: 'https://big-personal-project.onrender.com//'
             }
         ]
     },
