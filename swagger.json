@@ -5,16 +5,20 @@
     "description": "Big Personal Assignment Swagger",
     "version": "1.0.0"
   },
-  "host": "big-personal-project.onrender.com",
+  "host": "zero4-personal-assignment.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
   ],
 
+
+
+
   "paths": {
     "/days" : {
     "get" : {
       "description" : "This route gets all the days.", 
+
       "produces" : ["application/json"],
       "parameters" :[],
       "responses" : {
@@ -92,6 +96,7 @@
             "description" : "Day retrieved successfully"
           }
         }
+        
       },
 
 

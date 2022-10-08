@@ -1,21 +1,8 @@
 const routes = require('express').Router();
-const day = require('./day');
+const day = require('./dayRoute');
 
-routes.use('/', require('./swagger'));
+routes.use('/', require('./swaggerRoutes'));
 routes.use('/days', day);
-/*routes.use
-(
-  '/',
-  (
-    docData = (req, res) => 
-    {
-        let docData = 
-        {
-            documentationURL: 'https://pchound.github.io/personal_assignment',
-        };
-        res.send(docData);
-    }
-  )
-);*/
+routes.use('/login', require('./auth'));
 
 module.exports = routes;
