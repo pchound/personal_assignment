@@ -12,16 +12,6 @@ async function users(request, response) {
 };
 
 
-
-
-
-
-
-
-
-
-
-
 async function usersId(request, response) 
 {
     console.log('Responding to request');
@@ -29,14 +19,6 @@ async function usersId(request, response)
     response.writeHead(200, { 'Content-Type': 'application/json' });
     response.end(JSON.stringify(user), 'utf-8');
 };
-
-
-
-
-
-
-
-
 
 async function getAllUsers(req, res) 
 {
@@ -51,14 +33,6 @@ async function getAllUsers(req, res)
     }
 };
 
-
-
-
-
-
-
-
-
 async function getUserById(req, res) {
     try {
         const user = await client.db('personal_assignment').collection('users').find({_id:new ObjectId(req.params.id)}).toArray();
@@ -67,19 +41,6 @@ async function getUserById(req, res) {
         return res.status(500).json({message:'Server Error'});
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 async function createUser(req, res) 
 {
@@ -105,14 +66,6 @@ async function createUser(req, res)
             res.status(500).json(response.error || 'Some error occurred while creating the user.');
         }
 };
-
-
-
-
-
-
-
-
 
 async function updateUserById(req,res)
 {
